@@ -12,9 +12,9 @@ return new class extends Migration
             $table->id('ID_usuarios');
             $table->foreignId('ID_tipo_usuario')->constrained('tipo_usuario', 'ID_tipo_usuario');
             $table->string('Nom_usuarios', 50);
-            $table->string('Telefono_usuarios', 50);
+            $table->string('Telefono_usuarios', 50)->nullable();
             $table->string('Email_usuarios', 50);
-            $table->string('Login_usuarios', 50);
+            $table->string('Login_usuarios', 50)->unique();
             $table->string('Password_usuarios', 50);
             $table->string('Estado_usuarios', 50);
             $table->timestamps();
